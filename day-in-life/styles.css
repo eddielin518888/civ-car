@@ -76,11 +76,16 @@
     gap: 1rem;
   }
   .event {
-    padding: 1rem;
     border: 0.2rem solid black;
     border-radius: 1rem;
     width: min(700px, 90vw);
     background-color: hsl(220, 75%, 75%);
+    padding: 1rem 0;
+    .pic {
+      height: 14rem;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -105,5 +110,14 @@
   .name {
     font-size: clamp(1.5rem, 4vw, 2.2rem);
     font-weight: 600;
+  }
+  .breakfast .pic {
+    object-position: 50% 20%;
+  }
+  .snacks .pic {
+    object-position: 60% 40%;
+  }
+  .tech .pic {
+    object-position: 50% 20%;
   }
 }
