@@ -1,13 +1,109 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer reset, base, layout, components, utilities;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background-color: hsl(220, 85%, 85%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-body {
-  background-color: hsl(220, 80%, 80%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+@layer base {
+  @layer base {
+    h1,
+    h2,
+    h3,
+    a,
+    span,
+    p,
+    li {
+      color: hsl(0, 0%, 10%);
+    }
+    h1 {
+      margin-top: clamp(0.8rem, 6vh, 1.5rem);
+      font-size: clamp(2.2rem, 6vw, 3rem);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    h2 {
+      margin-top: clamp(1rem, 6vh, 1.6rem);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      line-height: 1.2;
+    }
+    h3 {
+      margin-top: clamp(0.3rem, 2.5vh, 0.6rem);
+      margin-bottom: clamp(0.3rem, 2.5vh, 0.6rem);
+      font-size: clamp(1.2rem, 3vw, 1.4rem);
+      line-height: 1.2;
+    }
+    a,
+    span {
+      display: inline-block;
+      line-height: 1.2;
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+    }
+    p,
+    li {
+      line-height: 1.6;
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+    }
+  }
+}
+
+@layer layout {
+  .container {
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline,
+  .stats,
+  .reflection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .event {
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    width: min(700px, 90vw);
+    background-color: hsl(220, 75%, 75%);
+  }
+}
+
+@layer components {
+  ul,
+  .reflection p {
+    padding: 1rem;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    width: min(700px, 90vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    background-color: hsl(240, 85%, 85%);
+  }
+  .reflection p {
+    background-color: hsl(210, 80%, 80%);
+  }
+  .name {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 600;
+  }
 }
