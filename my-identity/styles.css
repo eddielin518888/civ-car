@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 85%;
+    max-width: min(40rem, 85%);
     margin: auto;
   }
   .visible,
@@ -50,9 +50,50 @@
   .item {
     display: flex;
     flex-direction: row;
+    gap: 0.5rem;
+    .img-div {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      object-fit: cover;
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
   .item-info {
     display: flex;
     flex-direction: column;
+    text-align: left;
+    padding: 0.2rem;
+    gap: 0.2rem;
+    .item-desc {
+      color: hsl(30, 20%, 20%);
+    }
+  }
+  .pg-section {
+    background-color: hsl(30, 20%, 80%);
+    border: 0.5rem solid hsl(30, 15%, 70%);
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 1rem;
+  }
+}
+
+@layer components {
+  hr {
+    border: 0.1rem solid hsl(30, 20%, 40%);
+    width: 100%;
+  }
+  .section-divider {
+    margin: 1rem 0;
+  }
+  .name {
+    margin-bottom: 0.5rem;
   }
 }
