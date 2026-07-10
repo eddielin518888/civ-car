@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: min(40rem, 85%);
+    max-width: min(35rem, 85%);
     margin: auto;
   }
   .visible,
@@ -51,6 +51,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+
     .img-div {
       width: 5rem;
       height: 5rem;
@@ -75,6 +76,7 @@
     text-align: left;
     padding: 0.2rem;
     gap: 0.2rem;
+    flex: 1;
   }
   .pg-section {
     background-color: hsl(30, 20%, 80%);
@@ -96,7 +98,7 @@
     margin: 1rem 0;
   }
   .name {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
   }
   .item.programming .img {
