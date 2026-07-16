@@ -72,8 +72,18 @@
   .progress-bar {
     align-self: flex-start;
     display: flex;
+    flex-direction: column;
     position: sticky;
     top: 20%;
     padding: 1rem;
+  }
+}
+
+@layer components {
+  .progress-title {
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
   }
 }
