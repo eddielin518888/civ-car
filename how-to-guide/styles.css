@@ -56,7 +56,7 @@
 
 @layer layout {
   .page {
-    max-width: min(40rem, 85%);
+    max-width: min(45rem, 90%);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -67,6 +67,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    gap: 1rem;
     height: 100%;
   }
   .progress-bar {
@@ -74,8 +75,11 @@
     display: flex;
     flex-direction: column;
     position: sticky;
-    top: 20%;
+    top: 15%;
     padding: 1rem;
+  }
+  .guide-content {
+    flex: 1;
   }
 }
 
@@ -85,5 +89,8 @@
     margin-top: 0.5rem;
     margin-bottom: 0.1rem;
     font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+  .title {
+    text-align: center;
   }
 }
