@@ -72,11 +72,15 @@
   }
   .progress-bar {
     align-self: flex-start;
-    display: flex;
-    flex-direction: column;
     position: sticky;
     top: 15%;
     padding: 1rem;
+    &,
+    & .progress-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
   .guide-content {
     flex: 1;
@@ -90,7 +94,12 @@
     margin-bottom: 0.1rem;
     font-size: clamp(1rem, 3vw, 1.2rem);
   }
-  .title {
+  .title,
+  .intro {
     text-align: center;
+  }
+  li.progress-step > a {
+    color: hsl(0, 0%, 20%);
+    text-decoration: none;
   }
 }
