@@ -48,7 +48,8 @@
     }
   }
   h4,
-  .checklist-num {
+  .checklist-num,
+  .evidence-desc-title {
     font-weight: 500;
     margin-top: 0.5rem;
     margin-bottom: 0.1rem;
@@ -85,13 +86,19 @@
       flex-direction: row;
       width: 100%;
       gap: 0.5rem;
-      .card-evidence-container {
-        height: 10rem;
+      .evidence-desc-pair {
         flex: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        .card-evidence-container {
+          height: 10rem;
+          width: 100%;
+        }
       }
     }
   }
-  .content-1 .grid-2-col {
+  .grid-2-col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -118,7 +125,7 @@
           width: 3rem;
           height: 3rem;
           border-radius: 0.4rem;
-          :is(&, .card-evidence-container, .pathway-img-container) {
+          :is(&, .card-evidence-container, .pathway-img-container, .img-container) {
             overflow: hidden;
             border: 0.2rem solid hsl(0, 0%, 20%);
             a {
