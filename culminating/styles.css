@@ -66,6 +66,9 @@
       -webkit-text-stroke: 0.06rem hsl(0, 0%, 10%);
     }
   }
+  .bold {
+    font-weight: 600;
+  }
 }
 
 @layer layout {
@@ -114,15 +117,19 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 0.5rem;
     }
-    .card {
+    :is(& .card, .health-pillar, .goal-pillar) {
       border: 0.2rem solid hsl(0, 0%, 20%);
       border-radius: 0.5rem;
       width: 100%;
-      padding: 0rem 0.5rem;
+      padding: 0rem 0.5rem 0.5rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      flex: 1;
       .card-title {
+        margin-bottom: 0rem;
+      }
+      .pillar-title {
         margin-bottom: 0rem;
       }
       .item {
@@ -198,18 +205,6 @@
   }
   .section-3 {
     background-image: linear-gradient(to bottom, hsl(50, 45%, 90%), hsl(70, 35%, 95%));
-    .health-pillar {
-      border: 0.2rem solid hsl(0, 0%, 20%);
-      border-radius: 0.5rem;
-      width: 100%;
-      padding: 0rem 0.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      .pillar-title {
-        margin-bottom: 0rem;
-      }
-    }
     @media screen and (max-width: 40rem) {
       .row {
         flex-direction: column;
@@ -219,7 +214,13 @@
   .section-4 {
     background-image: linear-gradient(to bottom, hsl(90, 45%, 90%), hsl(130, 35%, 95%));
     .card-evidence-container img {
-      aspect-ratio: 16/9;
+      aspect-ratio: 16/7;
+    }
+    .goal-pillar {
+      flex: 1;
+      ul {
+        list-style-type: none;
+      }
     }
   }
   .section-5 {
