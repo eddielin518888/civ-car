@@ -181,6 +181,14 @@
         border: 0.2rem solid hsl(0, 0%, 20%);
       }
     }
+    @media screen and (max-width: 40rem) {
+      .pathway-evidence-row {
+        flex-direction: column;
+        .card-evidence-container {
+          aspect-ratio: 16/8;
+        }
+      }
+    }
   }
   .section-2 {
     background-image: linear-gradient(to bottom, hsl(20, 45%, 90%), hsl(30, 35%, 95%));
@@ -200,6 +208,11 @@
       gap: 1rem;
       .pillar-title {
         margin-bottom: 0rem;
+      }
+    }
+    @media screen and (max-width: 40rem) {
+      .row {
+        flex-direction: column;
       }
     }
   }
