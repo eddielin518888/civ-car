@@ -229,6 +229,9 @@
       display: flex;
       flex-direction: column;
     }
+    .trend-title {
+      margin: 0.5rem 0;
+    }
   }
   .section-6 {
     background-image: linear-gradient(to bottom, hsl(240, 45%, 90%), hsl(260, 35%, 95%));
