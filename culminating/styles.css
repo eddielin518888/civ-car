@@ -218,6 +218,9 @@
   }
   .section-4 {
     background-image: linear-gradient(to bottom, hsl(90, 45%, 90%), hsl(130, 35%, 95%));
+    .card-evidence-container img {
+      aspect-ratio: 16/9;
+    }
   }
   .section-5 {
     background-image: linear-gradient(to bottom, hsl(170, 45%, 90%), hsl(220, 35%, 95%));
