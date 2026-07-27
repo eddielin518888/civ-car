@@ -117,7 +117,7 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 0.5rem;
     }
-    :is(& .card, .health-pillar, .goal-pillar) {
+    :is(& .card, .card, .health-pillar, .goal-pillar, .trend-pillar) {
       border: 0.2rem solid hsl(0, 0%, 20%);
       border-radius: 0.5rem;
       width: 100%;
@@ -225,6 +225,10 @@
   }
   .section-5 {
     background-image: linear-gradient(to bottom, hsl(170, 45%, 90%), hsl(220, 35%, 95%));
+    .trend-affect-column {
+      display: flex;
+      flex-direction: column;
+    }
   }
   .section-6 {
     background-image: linear-gradient(to bottom, hsl(240, 45%, 90%), hsl(260, 35%, 95%));
